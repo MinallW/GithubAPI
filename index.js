@@ -61,7 +61,6 @@ function gitPulling() {
 
 app.post('/', (req, res) => {
     console.log(req)
-    console.log('tet')
     cding()
     gitPulling()
 
