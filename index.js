@@ -59,8 +59,9 @@ function gitPulling() {
     }) 
 }
 
-app.get('/', (req, res) => {
-
+app.post('/', (req, res) => {
+    console.log(req)
+    console.log('test')
     cding()
     gitPulling()
 
