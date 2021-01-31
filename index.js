@@ -32,7 +32,7 @@ const commands = {
         }) 
     },
     startAPI: () => {
-        return exec("pm2 stop api", (error, stdout, stderr) => {
+        return exec("pm2 start api", (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
@@ -87,12 +87,10 @@ const commands = {
 
 app.get('/', (req, res) => {
   
-    commands.stopAPI()
     commands.cd()
     commands.gitAdd()
     commands.gitCommit()
     commands.gitPulling()
-    commands.startAPI()
 })
 
 app.listen(port, () => {
