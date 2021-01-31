@@ -61,6 +61,7 @@ function gitPulling() {
 
 app.post('/', (req, res) => {
     console.log(req)
+    console.log('this is a change')
     cding()
     gitPulling()
 
