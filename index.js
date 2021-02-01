@@ -86,6 +86,7 @@ const commands = {
 }
 
 function updating() {
+    
     commands.stopAPI()
     commands.cd()
     commands.gitPulling()
@@ -97,5 +98,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Examplee app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}`)
 })
