@@ -85,14 +85,17 @@ const commands = {
     }
 }
 
-app.get('/', (req, res) => {
-  
+function updating() {
+    commands.stopAPI()
     commands.cd()
-    commands.gitAdd()
-    commands.gitCommit()
     commands.gitPulling()
+    commands.startAPI()
+}
+
+app.get('/', (req, res) => {
+    updating()
 })
 
 app.listen(port, () => {
-  console.log(`Examplee app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}`)
 })
