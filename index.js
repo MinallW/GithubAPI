@@ -86,7 +86,6 @@ const commands = {
 }
 
 function updating() {
-    
     commands.stopAPI()
     commands.cd()
     commands.gitPulling()
